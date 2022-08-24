@@ -1,0 +1,15 @@
+<div class="MainClass">
+  <h1>LOGIN APP</h1>
+  <form>
+    User Name:
+    <input type="text" [(ngModel)]="username" name="username" /><br />
+    User Password:
+    <input type="password" [(ngModel)]="password" name="password" />
+    <br /><br />
+    {{ username }}<br />
+    {{ password }}<br />
+    <input type="button" value="login" (click)="checkLogin()" />
+    <h3>{{ msg }}</h3>
+  </form>
+</div>
+<p>login works!</p>

@@ -1,0 +1,17 @@
+<div>
+  <h4>Style directives demo</h4>
+  <div [style.color]="myColor">{{ marks }}</div>
+  <h4>ngClass directives demo</h4>
+  <div [ngClass]="myClass">{{ markclass }}</div>
+
+  <h4>ngIf and else directives demo</h4>
+  <div *ngIf="status; then template1; else template2"></div>
+  <div id="template1">
+    <ng-template #template1>
+      <h4>Congratulations</h4>
+    </ng-template>
+  </div>
+  <ng-template #template2>
+    <h4>Better luck next time</h4>
+  </ng-template>
+</div>

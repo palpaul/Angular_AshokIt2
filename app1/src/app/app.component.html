@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="welcome">
+      <h1>Welcome to Ashok IT</h1>
+
+      Thanks, Ashok IT Team.
+    </div>
+    <h3>Hey I'm started learning angular 14</h3>
+    <!--if you want to load any compont always use thatcomponet selector in app.component.html here only ok -->
+    <app-greet></app-greet>
+    <app-wish></app-wish>
+
+    <div>
+      <h2>ALL Binding performing</h2>
+      <h4>its --Interpolation binding display var data in the template</h4>
+      name:{{ name }}<br />
+      age:{{ age }}
+      <hr />
+      <h4>its --property binding send data from component to templates</h4>
+      Name<input type="text" [ngModel]="name" /><br />
+      Age <input type="text" [ngModel]="age" /><br />
+      <hr />
+      <h4>its --event binding send data from template to component</h4>
+      <input type="button" value="Submit" (click)="handleSubmitBtn()" />
+
+      <hr />
+      <h4>
+        its --Two-way data binding send data from component to templates and
+        template to component
+      </h4>
+      Name<input type="text" [(ngModel)]="name" /><br />
+      Age <input type="text" [(ngModel)]="age" /><br />
+      <hr />
+    </div>
+  </body>
+</html>

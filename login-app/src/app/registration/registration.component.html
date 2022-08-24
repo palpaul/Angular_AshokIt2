@@ -1,0 +1,33 @@
+<h1>Registration</h1>
+<form>
+  UserName: <input type="text" name="username" [(ngModel)]="username" /><br />
+  Password :
+  <input type="password" name="password" [(ngModel)]="password" /><br />
+  Confirm Password:
+  <input
+    type="password"
+    name="confirmPassword"
+    [(ngModel)]="confirmPassword"
+  /><br />
+  Gender :
+  <input type="radio" name="gender" [(ngModel)]="gender" value="M" />Male
+  <input type="radio" name="gender" [(ngModel)]="gender" value="F" />Female
+  <br />
+  Country:<select [(ngModel)]="country">
+    <option>-select-</option>
+    <option>India</option>
+    <option>USA</option>
+    <option>JApaN</option>
+    <option>Rusia</option>
+    <option>Germany</option>
+  </select>
+  <br />
+  {{ username }}
+  {{ password }}
+  {{ confirmPassword }}
+  {{ gender }}
+  {{ country }}
+  <br />
+  <input type="button" value="Submit" (click)="handleRegister()" />
+  <h3>{{ msg }}</h3>
+</form>
